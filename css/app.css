@@ -1,0 +1,129 @@
+/* love-language-exchange — page styles on top of the shared love theme */
+
+main {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  min-height: auto;
+  text-align: center;
+  padding: 2.4rem 1rem 0;
+}
+
+.eyebrow { color: var(--pink); }
+.hero h1 { margin: 0.2rem 0 0.4rem; }
+.subtitle { margin: 0; color: var(--muted); }
+
+.sent-note {
+  text-align: center;
+  background: rgba(255, 159, 207, 0.14);
+  border: 1px solid var(--pink-strong);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  margin: 0 auto;
+  max-width: 34rem;
+  color: var(--text);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.3rem 1.4rem;
+  box-shadow: var(--shadow);
+  max-width: 44rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel h2 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.panel p { color: var(--muted); margin: 0 0 0.8rem; }
+.hint { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.8rem; }
+
+.phrase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.7rem;
+}
+
+.phrase-card {
+  text-align: center;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  border-radius: 14px;
+  padding: 1rem 0.9rem;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: border-color 0.25s ease, transform 0.15s ease;
+}
+
+.phrase-card:hover { border-color: var(--pink); transform: translateY(-2px); }
+.phrase-card.flipped { border-color: var(--pink-strong); background: rgba(255, 159, 207, 0.1); }
+
+.phrase-urdu { font-size: 1.2rem; line-height: 1.6; }
+.phrase-roman { color: var(--muted); font-size: 0.85rem; }
+.phrase-romanian { font-size: 1.2rem; font-weight: 600; color: var(--text); }
+.phrase-english { color: var(--muted); font-size: 0.85rem; }
+
+.phrase-card .phrase-back { display: none; flex-direction: column; gap: 0.3rem; }
+.phrase-card.flipped .phrase-front { display: none; }
+.phrase-card.flipped .phrase-back { display: flex; }
+
+.quiz-panel { text-align: center; }
+
+.quiz-urdu {
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0.4rem 0 1rem;
+  min-height: 1.6em;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.quiz-option {
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 0.7rem 0.6rem;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.quiz-option:hover { border-color: var(--pink); }
+
+.quiz-feedback { min-height: 1.3em; color: var(--pink); margin: 0.9rem 0 0.4rem; font-size: 0.9rem; }
+
+.quiz-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.quiz-scoreline { color: var(--muted); font-size: 0.9rem; }
+.quiz-scoreline span { color: var(--text); font-weight: 700; }
+
+.share-panel p { color: var(--muted); margin: 0 0 0.8rem; }
+.share-note { min-height: 1.2em; font-size: 0.85rem; color: var(--muted); margin: 0.7rem 0 0; }

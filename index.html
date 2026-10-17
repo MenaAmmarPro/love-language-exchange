@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Tongues — Urdu &amp; Romanian for us</title>
+  <meta name="description" content="A tiny Urdu ↔ Romanian phrasebook for Mena and Ammar, with a little quiz.">
+  <meta property="og:title" content="Two Tongues — Urdu &amp; Romanian for us">
+  <meta property="og:description" content="A tiny Urdu ↔ Romanian phrasebook for Mena and Ammar, with a little quiz.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#090b20">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="langx">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-phrases/">Phrases</a>
+      <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Karachi &#8644; Bucharest</p>
+      <h1>Two <span>tongues</span></h1>
+      <p class="subtitle">A little Urdu &harr; Romanian phrasebook &mdash; tap a card to flip it.</p>
+    </section>
+
+    <p id="sent-note" class="sent-note" hidden></p>
+
+    <section class="panel book-panel">
+      <h2>The phrasebook</h2>
+      <p class="hint">Urdu on the front, Romanian on the back.</p>
+      <div id="phrase-grid" class="phrase-grid"></div>
+    </section>
+
+    <section class="panel quiz-panel">
+      <h2>Little quiz</h2>
+      <p class="hint">What does this mean in Romanian?</p>
+      <p id="quiz-urdu" class="quiz-urdu" dir="rtl">&nbsp;</p>
+      <div id="quiz-options" class="quiz-options"></div>
+      <p id="quiz-feedback" class="quiz-feedback">&nbsp;</p>
+      <div class="quiz-foot">
+        <button id="quiz-next" class="button button-ghost button-small" type="button">Another</button>
+        <span class="quiz-scoreline">Score: <span id="quiz-score">0</span></span>
+      </div>
+    </section>
+
+    <section class="panel share-panel">
+      <h2>Send a phrase</h2>
+      <p>Pass Ammar a line to practise &mdash; he&rsquo;ll get the whole card.</p>
+      <button id="share" class="button button-primary" type="button">Copy a phrase link</button>
+      <p id="note" class="share-note">&nbsp;</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
